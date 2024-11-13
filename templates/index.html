@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Usando o url_for para carregar o CSS da pasta static -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/light_mode.js') }}"></script>
+    <title>ASK.AI</title>
+</head>
+<body>
+    <header>
+        <h1><span>ASK</span>AI</h1>
+        <h2>Hi! Do search here...</h2>
+        <button onclick="lightMode()" class="mode light">Light Mode</button>
+    </header>
+    <main>
+        <form action="" method="post">
+            <input type="text" name="ask" placeholder="Type here..." class="item">
+            <div class="file">
+                <input type="text" name="url-pdf" placeholder="URL or PDF" class="item">
+                <select name="option" id="option" class="item">
+                    <option value="pdf">PDF</option>
+                    <option value="video">Vídeo</option>
+                    <option value="site">Site</option>
+                </select>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <p><i>by &copy; Arthur R.</i></p>
+    </footer>
+</body>
+</html>
